@@ -5,9 +5,7 @@ const router = Router();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-router.get("/app", (req, res) => {
-    res.send("APP at " + __dirname);
-});
+
 router.use("/", _static(path.join(__dirname, "../app/dist")));
 router.use("/home", _static(path.join(__dirname, "../app/dist")));
 router.use("/about", _static(path.join(__dirname, "../app/dist")));

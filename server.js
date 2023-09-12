@@ -21,6 +21,18 @@ app.use(session({
 
 
 // Routes 
+import fs from "fs";
+app.get("/app", (req, res)=>{
+const folderName = '/app/dist';
+try {
+  if (!fs.existsSync(folderName)) {
+    console.error("The dir exist !!!");
+  }
+} catch (err) {
+  console.error(err);
+}
+});
+
 app.use("/", pagesRouter);
 
 app.listen(PORT, (err)=>{
