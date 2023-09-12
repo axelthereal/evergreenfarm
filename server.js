@@ -2,8 +2,8 @@ import express from "express";
 import path  from "path";
 import cors from "cors";
 import session from "express-session"; 
-import { fileURLToPath } from "url"; 
-import fs from 'fs';
+import { fileURLToPath } from "url";  
+import testPath from "./app/try.mjs";
 
 
 // GlobalVariables
@@ -24,17 +24,7 @@ app.use(session({
 
 // Routes 
 app.get("/app", (req, res) => { 
-const folderName = path.join(__dirname, "/app/dist");
-try {
-  if (fs.existsSync(folderName)) {
-    res.send("File exist !!!");
-  }else{
-    res.send("File does not exist !!!");
-  }
-} catch (err) {
-  console.error(err);
-  res.send("Error occured !!!");
-}
+    res.send(testPath());
 });
 app.use("/", express.static(path.join(__dirname, "/app/dist")));
 app.use("/home", express.static(path.join(__dirname, "/app/dist")));
