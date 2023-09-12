@@ -22,10 +22,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
-
-// Serve static files from the 'dist' directory inside 'app'
-app.use(express.static(path.join(__dirname, 'app', 'dist')));
-
+ 
 // Routes 
 app.use("/", express.static(path.join(__dirname, "app/dist")));
 app.use("/home", express.static(path.join(__dirname, "app/dist")));
