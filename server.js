@@ -31,7 +31,7 @@ app.get("/app", (req, res) => {
     res.send(testPath());
 });
 
-app.get("*", (req, res)=>{
+app.get("*", (req, res)=>{ 
     res.sendFile(path.join(__dirname, "app", "dist", "index.html"));
 });
 

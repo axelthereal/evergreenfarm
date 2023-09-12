@@ -5,14 +5,15 @@ import fs from 'fs';
 
 function testPath() {
          let __dirname = path.dirname(fileURLToPath(import.meta.url));
+         let npath = path.join(__dirname, "dist", "index.html");
          try {
-            if (fs.existsSync(__dirname)) {
-              return "File exist !!!" + __dirname;
+            if (fs.existsSync(npath)) {
+              return "File exist !!!" + npath;
             }else{
-                return "File exist !!!" + __dirname;
+                return "File does not exist !!!" + npath;
             }
           } catch (err) { 
-            return "Error occured !!!" + __dirname;
+            return "Error occured !!!" + npath;
           }
 }
 
