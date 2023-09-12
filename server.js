@@ -22,14 +22,13 @@ app.use(session({
     saveUninitialized: false
 }));
  
-// Routes 
-app.use(express.static(path.join(__dirname, "app", "dist")));
+// Routes  
+app.use("/", (req, res) => {
+     res.send("Hello World");
+}); 
 
-app.use("/", express.static(path.join(__dirname, "app/dist")));
-app.use("/home", express.static(path.join(__dirname, "app/dist")));
-app.use("/about", express.static(path.join(__dirname, "app/dist")));
- 
-app.listen(PORT, (err)=>{
+// Listen
+app.listen(PORT, (err) => {
     if(err) throw err;
     console.log(`Server is running on PORT:${PORT}`);
 });
