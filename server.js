@@ -3,10 +3,14 @@ import path  from "path";
 import cors from "cors";
 import session from "express-session";
 import { pagesRouter } from "./routes/pages.js";
+import path from "path";
+import { fileURLToPath } from "url"; 
+
 
 // GlobalVariables
 const app = express();
 const PORT = process.env.PORT || 8080;
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Middlewares
 app.use(cors());
@@ -21,20 +25,8 @@ app.use(session({
 
 
 // Routes 
-import fs from "fs";
-app.get("/app", (req, res)=>{
-const folderName = '/app/dist';
-try {
-  if (!fs.existsSync(folderName)) { 
-    res.send("The dir exist !!!");
-  }
-} catch (err) {
-  console.error(err);
-  res.send("Not found !!!");
-}
-});
-
-app.use("/", pagesRouter);
+app.use("/", _static(path.join(__dirname, "/app/dist")));
+//app.use("/", pagesRouter);
 
 app.listen(PORT, (err)=>{
     if(err) throw err;
