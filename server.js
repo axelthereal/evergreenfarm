@@ -21,6 +21,9 @@ app.use(session({
 
 
 // Routes
+app.get("/try", (req, res)=>{
+   res.send("app is on");
+});
 app.use("/", pagesRouter);
 
 app.listen(PORT, (err)=>{
