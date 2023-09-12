@@ -2,8 +2,7 @@ import express from "express";
 import path  from "path";
 import cors from "cors";
 import session from "express-session"; 
-import { fileURLToPath } from "url";  
-import testPath from "./app/try.mjs";
+import { fileURLToPath } from "url";   
 
 
 // GlobalVariables
@@ -24,6 +23,8 @@ app.use(session({
 }));
  
 // Routes 
+app.use(express.static(path.join(__dirname, "app", "dist")));
+
 app.use("/", express.static(path.join(__dirname, "app/dist")));
 app.use("/home", express.static(path.join(__dirname, "app/dist")));
 app.use("/about", express.static(path.join(__dirname, "app/dist")));
