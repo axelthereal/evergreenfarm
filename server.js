@@ -25,11 +25,12 @@ import fs from "fs";
 app.get("/app", (req, res)=>{
 const folderName = '/app/dist';
 try {
-  if (!fs.existsSync(folderName)) {
-    console.error("The dir exist !!!");
+  if (!fs.existsSync(folderName)) { 
+    res.send("The dir exist !!!");
   }
 } catch (err) {
   console.error(err);
+  res.send("Not found !!!");
 }
 });
 
