@@ -22,6 +22,9 @@ app.use(session({
     saveUninitialized: false
 }));
 
+// Serve static files from the 'dist' directory inside 'app'
+app.use(express.static(path.join(__dirname, 'app', 'dist')));
+
 // Routes 
 app.get("/app", (req, res) => { 
     res.send(testPath());
@@ -31,7 +34,7 @@ app.get("/app", (req, res) => {
 app.use("/about", express.static(path.join(__dirname, "app/dist")));*/
 
 app.get("/", (req, res)=>{
-    res.sendFile(path.join(__dirname, "app/dist"));
+    res.sendFile(path.join(__dirname, "app", "dist"));
 });
 
 
