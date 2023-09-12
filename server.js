@@ -27,9 +27,9 @@ app.use(session({
 app.use(express.static(path.join(__dirname, 'app', 'dist')));
 
 // Routes 
-app.use("/", express.static(path.join(__dirname, "/app/dist")));
-app.use("/home", express.static(path.join(__dirname, "/app/dist")));
-app.use("/about", express.static(path.join(__dirname, "/app/dist")));
+app.use("/", express.static(path.join(__dirname, "app/dist")));
+app.use("/home", express.static(path.join(__dirname, "app/dist")));
+app.use("/about", express.static(path.join(__dirname, "app/dist")));
  
 app.listen(PORT, (err)=>{
     if(err) throw err;
