@@ -1,9 +1,7 @@
 import express from "express";
 import path  from "path";
 import cors from "cors";
-import session from "express-session";
-import { pagesRouter } from "./routes/pages.js";
-import path from "path";
+import session from "express-session"; 
 import { fileURLToPath } from "url"; 
 
 
@@ -23,10 +21,11 @@ app.use(session({
     saveUninitialized: false
 }));
 
-
 // Routes 
-app.use("/", _static(path.join(__dirname, "/app/dist")));
-//app.use("/", pagesRouter);
+app.use("/", express.static(path.join(__dirname, "/app/dist")));
+app.use("/home", express.static(path.join(__dirname, "/app/dist")));
+app.use("/about", express.static(path.join(__dirname, "/app/dist")));
+
 
 app.listen(PORT, (err)=>{
     if(err) throw err;
