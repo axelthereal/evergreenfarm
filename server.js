@@ -34,9 +34,8 @@ app.get("/app", (req, res) => {
 app.use("/about", express.static(path.join(__dirname, "app/dist")));*/
 
 app.get("/", (req, res)=>{
-    res.sendFile(path.join(__dirname, "app", "dist"));
+    res.sendFile(path.join(__dirname, "app", "dist", "index.html"));
 });
-
 
 app.listen(PORT, (err)=>{
     if(err) throw err;
