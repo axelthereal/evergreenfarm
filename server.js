@@ -28,10 +28,10 @@ app.use(express.static(path.join(__dirname, 'app', 'dist')));
 
 // Routes 
 app.get("/app", (req, res) => { 
-    res.send(testPath());
+    res.send(testPath()); 
 });
 
-app.get("*", (req, res)=>{ 
+app.get("/home", (req, res)=>{ 
     res.sendFile(path.join(__dirname, "app", "dist", "index.html"));
 });
 
