@@ -1,13 +1,19 @@
-import { static as _static, Router } from "express";
-import path from "path";
-import { fileURLToPath } from "url";
+import { Router } from "express"; 
+
 const router = Router();
+let context = {
+      viewtitle: ""
+};
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+// Routes
+router.get("/", (req, res)=>{
+      res.redirect("/home"); 
+});
+router.get("/home", (req, res) => {
+    context.viewtitle = "Home"
+    res.render("screens/HomeScreen", context); 
+});
 
-router.use("/", _static(path.join(__dirname, "/app/dist")));
-router.use("/home", _static(path.join(__dirname, "/app/dist")));
-router.use("/about", _static(path.join(__dirname, "/app/dist")));
 
 export const pagesRouter = router;

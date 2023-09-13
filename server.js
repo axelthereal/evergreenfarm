@@ -1,18 +1,16 @@
-import express from "express";
-import path  from "path";
-import cors from "cors";
-import session from "express-session"; 
-import { fileURLToPath } from "url";   
-
+import express from "express";  
+import session from "express-session";  
+import { pagesRouter } from "./routes/pages.js";
 
 // GlobalVariables
 const app = express();
-const PORT = process.env.PORT || 8080;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const PORT = process.env.PORT || 8080; 
 
-// Middlewares
-app.use(cors());
+// View_Engine
+app.set("view engine", "ejs");
+app.use("/assets", express.static("./static"));
+
+// Middlewares 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(session({
@@ -23,9 +21,7 @@ app.use(session({
 }));
  
 // Routes  
-app.use("/", (req, res) => {
-     res.send("Hello World");
-}); 
+app.use("/",  pagesRouter); 
 
 // Listen
 app.listen(PORT, (err) => {
