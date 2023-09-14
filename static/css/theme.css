@@ -131,7 +131,7 @@
     .tc-secondary-light{ color: var(--cl-secondary-light); }    
 
 
-/* Global-Components */ 
+/* Global-Components */    
 /* Body && Components */
   body{
     background-color: var(--cl-lighter);
