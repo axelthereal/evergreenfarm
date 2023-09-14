@@ -1,0 +1,112 @@
+/* AppTheme */
+   :root{
+     /* Colors */
+      /* Active-colors */ 
+      --cl-active-dark: #098761;
+      --cl-active: #0a996f;
+      --cl-active-light: #d7fec8;
+
+      /* Light-colors */
+      --cl-light:#f1f1f1;
+      --cl-lighter-dark:#E1E1E1;
+      --cl-lighter:#fefffc;
+      --cl-lighter-light: #efeeec;
+
+      /* Dark-colors */
+      --cl-darker-dark: #141414;
+      --cl-darker: #1b1b1b;
+      --cl-darker-light: #525252;
+
+      /* Secondary-colors */
+      --cl-secondary-dark: #C23C02;
+      --cl-secondary: #EC4701;
+      --cl-secondary-light: #ECE5D2;
+   }
+
+/* Backgrounds */
+    /* Active-colors */
+   .bg-active{ background-color: var(--cl-active); }
+   .bg-active-dark{ background-color: var(--cl-active-dark); }  
+   .bg-active-light{ background-color: var(--cl-active-light); } 
+
+   /* Lighter-colors */
+   .bg-lighter{ background-color: var(--cl-lighter); }
+   .bg-lighter-dark{ background-color: var(--cl-lighter-dark); }  
+   .bg-lighter-light{ background-color: var(--cl-lighter-light); } 
+
+   
+    /* Darker-colors */
+   .bg-darker{ background-color: var(--cl-darker); }
+   .bg-darker-dark{ background-color: var(--cl-darker-dark); }  
+   .bg-darker-light{ background-color: var(--cl-darker-light); }
+    
+   
+    /* Secondary-colors */
+   .bg-secondary{ background-color: var(--cl-secondary); }
+   .bg-secondary-dark{ background-color: var(--cl-secondary-dark); }  
+   .bg-secondary-light{ background-color: var(--cl-secondary-light); } 
+
+/* Text-Colors */
+    /* Active-colors */
+    .tc-active{ color: var(--cl-active); }
+    .tc-active-dark{ color: var(--cl-active-dark); }  
+    .tc-active-light{ color: var(--cl-active-light); } 
+ 
+    /* Lighter-colors */
+    .tc-lighter{ color: var(--cl-lighter); }
+    .tc-lighter-dark{ color: var(--cl-lighter-dark); }  
+    .tc-lighter-light{ color: var(--cl-lighter-light); } 
+ 
+    
+     /* Darker-colors */
+    .tc-darker{ color: var(--cl-darker); }
+    .tc-darker-dark{ color: var(--cl-darker-dark); }  
+    .tc-darker-light{ color: var(--cl-darker-light); }
+     
+    
+     /* Secondary-colors */
+    .tc-secondary{ color: var(--cl-secondary); }
+    .tc-secondary-dark{ color: var(--cl-secondary-dark); }  
+    .tc-secondary-light{ color: var(--cl-secondary-light); }    
+
+
+/* Global-Components */
+  body{
+    background-color: var(--cl-lighter);
+    color: var(--cl-darker);
+  }
+
+  /* Buttons */
+  .btn:not(.btn-default){
+     border-radius: 16px;
+     padding: 10px 25px 10px 25px;
+     border: none;
+  }
+  .btn-active, .btn-darker { 
+    color:var(--cl-lighter-light) !important; 
+  }
+  .btn-active:active, .btn-darker:active{
+    opacity:0.9 !important; 
+  }
+
+  /* Active-Buttons */
+  .btn-active{
+     background-color: var(--cl-active);
+  }
+  .btn-active:active{ 
+    background-color: var(--cl-active-light) !important; 
+  }
+  .btn-active:hover{
+    background-color: var(--cl-active-dark) !important; 
+  }
+
+ /* Dark-Buttons */ 
+ .btn-darker{
+    background-color: var(--cl-darker);
+ }
+ .btn-darker:active{ 
+   background-color: var(--cl-darker-light) !important; 
+ }
+ .btn-darker:hover{
+   background-color: var(--cl-darker-dark) !important; 
+ }
