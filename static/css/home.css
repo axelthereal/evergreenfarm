@@ -1,0 +1,19 @@
+/* HomeScreen Styling */
+  /* MainBanner -imgBanner */
+     .contentBanner .banner-container{
+        height: 85vh; 
+     } 
+     .MainBanner .img-container{ 
+        height: 100%;
+        min-height: 500px; 
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+     }
+     .MainBanner img{
+         width: 100%;
+         height: auto;
+         object-fit: contain; 
+         position: absolute;
+         z-index: 1;
+     }

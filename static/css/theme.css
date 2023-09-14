@@ -136,8 +136,10 @@
   body{
     background-color: var(--cl-lighter);
     color: var(--cl-darker);
-    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif; 
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4em; 
   }
+  
 
   /* Buttons */
   .btn:not(.btn-default){

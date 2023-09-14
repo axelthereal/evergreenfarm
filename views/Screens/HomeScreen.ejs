@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Load-Static-Global-Assets -->
     <%- include("../Components/base.ejs"); %>
+
+    <!-- Load-Static-Local-assets -->
+    <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
     <!-- MainHeader -->
      <%- include("../Headers/GlobalNavbar.ejs"); %>
     <!-- */MainHeader -->
+    
+    <!-- AppBody -->
+    <main>
 
+    <!-- MainBanner -->
+    <div class="MainBanner contentBanner bg-active-light">
+         <div class="banner-container container-fluid col-lg-11">
+             <div class="row d-flex align-items-center py-2">
+
+                <!-- Banner-content -->
+                <div class="banner-content-bx bx-one bx-text col-md-6 py-3 d-flex flex-column gap-4">
+                    <h1 class="fw-bold display-3 tc-active">Connections that spark growth</h1>
+                    <p class="fw-normal fs-6 tc-darker-light">
+                       Say hello to a new innovative way of shopping in africa that helps 
+                       you build everything from grow. sell and distrubute your goods easily...</p> 
+                    <p class="">
+                        <a href="/" class="btn btn-darker fw-medium">Start shopping</a>
+                    </p>
+                </div>
+                
+                <!-- Banner-image -->
+                <div class="banner-content-bx bx-two bx-img col-md-6 py-3">
+                    <div class="img-container mx-auto">
+                       <img src="assets/gallery/girl-with-mom-in-farm.jpg" alt="evergreenfarms-image-of-girl-in-farm" />
+                    </div>
+                </div>
+
+             </div>
+         </div>
+    </div>
+    <!-- /*MainBanner -->
+
+
+      </main>
+    <!-- /*AppBody -->
 
 </body>
 </html>
