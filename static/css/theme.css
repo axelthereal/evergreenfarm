@@ -1,3 +1,64 @@
+/* Fonts */
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins/Poppins-Black.eot');
+  src: local('Poppins Black'), local('Poppins-Black'),
+      url('../fonts/poppins/Poppins-Black.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/poppins/Poppins-Black.woff2') format('woff2'),
+      url('../fonts/poppins/Poppins-Black.woff') format('woff'),
+      url('../fonts/poppins/Poppins-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins/Poppins-Bold.eot');
+  src: local('Poppins Bold'), local('Poppins-Bold'),
+      url('../fonts/poppins/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/poppins/Poppins-Bold.woff2') format('woff2'),
+      url('../fonts/poppins/Poppins-Bold.woff') format('woff'),
+      url('../fonts/poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins/Poppins-Regular.eot');
+  src: local('Poppins Regular'), local('Poppins-Regular'),
+      url('../fonts/poppins/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/poppins/Poppins-Regular.woff2') format('woff2'),
+      url('../fonts/poppins/Poppins-Regular.woff') format('woff'),
+      url('../fonts/poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins/Poppins-Medium.eot');
+  src: local('Poppins Medium'), local('Poppins-Medium'),
+      url('../fonts/poppins/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/poppins/Poppins-Medium.woff2') format('woff2'),
+      url('../fonts/poppins/Poppins-Medium.woff') format('woff'),
+      url('../fonts/poppins/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins/Poppins-SemiBold.eot');
+  src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
+      url('../fonts/poppins/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/poppins/Poppins-SemiBold.woff2') format('woff2'),
+      url('../fonts/poppins/Poppins-SemiBold.woff') format('woff'),
+      url('../fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+.fw-black{
+  font-weight: 900;
+  font-style: normal;
+}
+
 /* AppTheme */
    :root{
      /* Colors */
@@ -70,10 +131,12 @@
     .tc-secondary-light{ color: var(--cl-secondary-light); }    
 
 
-/* Global-Components */
+/* Global-Components */ 
+/* Body && Components */
   body{
     background-color: var(--cl-lighter);
     color: var(--cl-darker);
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif; 
   }
 
   /* Buttons */
