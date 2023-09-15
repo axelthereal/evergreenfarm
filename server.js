@@ -5,6 +5,9 @@ import { pagesRouter } from "./routes/pages.js";
 // GlobalVariables
 const app = express();
 const PORT = process.env.PORT || 8080; 
+let context = {
+    viewtitle: ""
+};
 
 // View_Engine
 app.set("view engine", "ejs");
@@ -21,7 +24,11 @@ app.use(session({
 }));
  
 // Routes  
-app.use("/",  pagesRouter); 
+app.get("/home", (req, res) => {
+    context.viewtitle = "Home";
+    res.render("screens/HomeScreen.ejs", context); 
+});
+
 
 // Listen
 app.listen(PORT, (err) => {
