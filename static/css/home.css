@@ -38,3 +38,13 @@
        width: 100%;
        height: auto; 
     }   
+
+/* SixthBanner */
+   .SixthBanner{
+      background: url("../gallery/countryside-workers-out-field.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+   }   
+
+    
