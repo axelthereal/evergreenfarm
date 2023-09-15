@@ -1,10 +1,16 @@
 import express from "express";  
 import session from "express-session";  
 import { pagesRouter } from "./routes/pages.js";
+import path from 'path';
+import { fileURLToPath } from "url";
+
 
 // GlobalVariables
 const app = express();
 const PORT = process.env.PORT || 8080; 
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename); 
 let context = {
     viewtitle: ""
 };
@@ -12,6 +18,11 @@ let context = {
 // View_Engine
 app.set("view engine", "ejs");
 app.use("/assets", express.static("./static"));
+
+
+// Set_views
+
+app.set('views', path.join(__dirname, 'views'));
 
 // Middlewares 
 app.use(express.urlencoded({ extended: false }));
