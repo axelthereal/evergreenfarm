@@ -4,20 +4,20 @@ import { pagesRouter } from "./routes/pages.js";
 import path from 'path';
 import { fileURLToPath } from "url";
 
-
 // GlobalVariables
 const app = express();
 const PORT = process.env.PORT || 8080; 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename); 
 
-
 // Set_views
 app.set('views', path.join(__dirname, 'views'));
+
 
 // View_Engine
 app.set("view engine", "ejs");
 app.use("/assets", express.static(path.join(__dirname, "static"))); 
+
 
 // Middlewares 
 app.use(express.urlencoded({ extended: false }));
@@ -29,9 +29,9 @@ app.use(session({
     saveUninitialized: false
 }));
  
+
 // Routes  
 app.use("/", pagesRouter);
-
 
 // Listen
 app.listen(PORT, (err) => {
