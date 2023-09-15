@@ -235,3 +235,9 @@ z-index: 3;
 .btn-outline-darker:hover{
   background-color: var(--cl-lighter) !important;
 }
+
+
+/* Forms & Inputs */
+.input-active:focus{
+  border: 1px solid var(--cl-active);
+}

@@ -45,6 +45,11 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: top;
-   }   
+   }  
+   
+/* SeventhBanner */
+ .SeventhBanner img{ 
+   height: auto;
+ }   
 
     
