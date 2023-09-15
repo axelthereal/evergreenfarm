@@ -8,12 +8,9 @@ import { fileURLToPath } from "url";
 // GlobalVariables
 const app = express();
 const PORT = process.env.PORT || 8080; 
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename); 
-let context = {
-    viewtitle: ""
-};
+
 
 // Set_views
 app.set('views', path.join(__dirname, 'views'));
@@ -33,10 +30,7 @@ app.use(session({
 }));
  
 // Routes  
-app.get("/home", (req, res) => {
-    context.viewtitle = "Home";
-    res.render("Screens/HomeScreen", context); 
-});
+app.use("/", pagesRouter);
 
 
 // Listen
