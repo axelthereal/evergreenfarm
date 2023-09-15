@@ -12,7 +12,7 @@ router.get("/", (req, res)=>{
 });
 router.get("/home", (req, res) => {
     context.viewtitle = "Home";
-    res.render("screens/HomeScreen", context); 
+    res.render("./screens/HomeScreen", context); 
 });
 
 
