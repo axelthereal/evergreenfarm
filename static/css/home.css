@@ -1,19 +1,28 @@
 /* HomeScreen Styling */
   /* MainBanner -imgBanner */
+     .contentBanner{
+        border-bottom-right-radius: 100px;
+     }
      .contentBanner .banner-container{
-        height: 85vh; 
+        min-height: 85vh; 
      } 
-     .MainBanner .img-container{ 
+     .MainBanner .img-container{
+        width: 90%; 
         height: 100%;
-        min-height: 500px; 
+        min-height: 70vh; 
         overflow: hidden;
         position: relative;
         z-index: 2;
+        border: 3px solid var(--cl-active);
+        border-radius: 50px 30px 180px 30px;
      }
      .MainBanner img{
          width: 100%;
-         height: auto;
-         object-fit: contain; 
+         height:100%;
+         object-fit: cover; 
          position: absolute;
          z-index: 1;
+     }
+     .banner-container .bx-one{
+        padding-right: 25px;
      }
