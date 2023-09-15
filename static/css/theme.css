@@ -131,7 +131,16 @@
     .tc-secondary-light{ color: var(--cl-secondary-light); }    
 
 
-/* Global-Components */    
+/* Global-Components */ 
+/* Banners-mixing */
+.sub-bottom {
+  z-index: 1;
+  padding-bottom:150px !important;
+}
+.sub-top {
+margin-top: -150px;
+z-index: 3; 
+}     
 /* Body && Components */
   body{
     background-color: var(--cl-lighter);
@@ -139,7 +148,13 @@
     font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.9em; 
   }
-  
+  a{
+    text-decoration: none;
+    color: inherit !important;
+  }
+  .btn, .form-control {
+    box-shadow: none !important;
+  }
 
   /* Buttons */
   .btn:not(.btn-default){
@@ -165,6 +180,22 @@
     background-color: var(--cl-active-dark) !important; 
   }
 
+  .btn-outline-active{
+    background-color: transparent !important;
+    border: 1px solid var(--cl-active) !important;
+    color:var(--cl-active-dark) !important;
+ }
+ .btn-outline-active:active{ 
+  border: 1px solid var(--cl-active-light) !important;
+  background-color: var(--cl-active-dark) !important;
+  opacity: 0.9;
+ }
+ .btn-outline-active:hover{
+  border: 1px solid var(--cl-active) !important;
+  background-color: var(--cl-active) !important; 
+  color:var(--cl-lighter) !important;
+ }
+
  /* Dark-Buttons */ 
  .btn-darker{
     background-color: var(--cl-darker);
@@ -175,3 +206,15 @@
  .btn-darker:hover{
    background-color: var(--cl-darker-dark) !important; 
  }
+ .btn-outline-darker{ 
+  background-color: var(--cl-lighter-light) !important;
+  border:1px solid var(--cl-lighter-dark) !important;
+  color: var(--cl-darker) !important;
+}
+.btn-outline-darker:active{  
+  opacity: 0.9;
+  background-color: var(--cl-lighter) !important; 
+}
+.btn-outline-darker:hover{
+  background-color: var(--cl-lighter) !important;
+}
