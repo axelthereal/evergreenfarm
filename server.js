@@ -15,14 +15,12 @@ let context = {
     viewtitle: ""
 };
 
+// Set_views
+app.set('views', path.join(__dirname, 'views'));
+
 // View_Engine
 app.set("view engine", "ejs");
 app.use("/assets", express.static("./static"));
-
-
-// Set_views
-
-app.set('views', path.join(__dirname, 'views'));
 
 // Middlewares 
 app.use(express.urlencoded({ extended: false }));
@@ -37,7 +35,7 @@ app.use(session({
 // Routes  
 app.get("/home", (req, res) => {
     context.viewtitle = "Home";
-    res.render("screens/HomeScreen", context); 
+    res.render("Screens/HomeScreen", context); 
 });
 
 
