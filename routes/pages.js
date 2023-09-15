@@ -11,7 +11,7 @@ router.get("/", (req, res)=>{
       res.redirect("/home"); 
 });
 router.get("/home", (req, res) => {
-    context.viewtitle = "Home"
+    context.viewtitle = "Home";
     res.render("screens/HomeScreen", context); 
 });
 
