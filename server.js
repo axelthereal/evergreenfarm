@@ -26,7 +26,7 @@ app.use(session({
 // Routes  
 app.get("/home", (req, res) => {
     context.viewtitle = "Home";
-    res.render("screens/HomeScreen.ejs", context); 
+    res.render("screens/HomeScreen", context); 
 });
 
 
