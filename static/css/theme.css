@@ -140,7 +140,10 @@
 .sub-top {
 margin-top: -150px;
 z-index: 3; 
-}  
+} 
+.round-all{
+  border-radius: 150px 150px 0px 0px !important;
+} 
 .gradient-container{
   position: relative;
 } 

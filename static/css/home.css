@@ -27,11 +27,6 @@
      .banner-container .bx-one{
         padding-right: 25px;
      }
-
-  /* ThirdBanner & FouthBanner */
-    .ThirdBanner, .FouthBanner, .FifthBanner {
-       border-radius: 150px 150px 0px 0px;
-    } 
  
  /* partners-img */
     .banner-container img.partners-img{
