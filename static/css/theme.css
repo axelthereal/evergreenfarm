@@ -86,49 +86,49 @@
 
 /* Backgrounds */
     /* Active-colors */
-   .bg-active{ background-color: var(--cl-active); }
-   .bg-active-dark{ background-color: var(--cl-active-dark); }  
-   .bg-active-light{ background-color: var(--cl-active-light); } 
+   .bg-active{ background-color: var(--cl-active) !important; }
+   .bg-active-dark{ background-color: var(--cl-active-dark) !important; }  
+   .bg-active-light{ background-color: var(--cl-active-light) !important; } 
 
    /* Lighter-colors */
-   .bg-lighter{ background-color: var(--cl-lighter); }
-   .bg-lighter-dark{ background-color: var(--cl-lighter-dark); }  
-   .bg-lighter-light{ background-color: var(--cl-lighter-light); } 
+   .bg-lighter{ background-color: var(--cl-lighter) !important; }
+   .bg-lighter-dark{ background-color: var(--cl-lighter-dark) !important; }  
+   .bg-lighter-light{ background-color: var(--cl-lighter-light) !important; } 
 
    
     /* Darker-colors */
-   .bg-darker{ background-color: var(--cl-darker); }
-   .bg-darker-dark{ background-color: var(--cl-darker-dark); }  
-   .bg-darker-light{ background-color: var(--cl-darker-light); }
+   .bg-darker{ background-color: var(--cl-darker) !important; }
+   .bg-darker-dark{ background-color: var(--cl-darker-dark) !important; }  
+   .bg-darker-light{ background-color: var(--cl-darker-light) !important; }
     
    
     /* Secondary-colors */
-   .bg-secondary{ background-color: var(--cl-secondary); }
-   .bg-secondary-dark{ background-color: var(--cl-secondary-dark); }  
-   .bg-secondary-light{ background-color: var(--cl-secondary-light); } 
+   .bg-secondary{ background-color: var(--cl-secondary) !important; }
+   .bg-secondary-dark{ background-color: var(--cl-secondary-dark) !important; }  
+   .bg-secondary-light{ background-color: var(--cl-secondary-light) !important; } 
 
 /* Text-Colors */
     /* Active-colors */
-    .tc-active{ color: var(--cl-active); }
-    .tc-active-dark{ color: var(--cl-active-dark); }  
-    .tc-active-light{ color: var(--cl-active-light); } 
+    .tc-active{ color: var(--cl-active) !important; }
+    .tc-active-dark{ color: var(--cl-active-dark) !important; }  
+    .tc-active-light{ color: var(--cl-active-light) !important; } 
  
     /* Lighter-colors */
-    .tc-lighter{ color: var(--cl-lighter); }
-    .tc-lighter-dark{ color: var(--cl-lighter-dark); }  
-    .tc-lighter-light{ color: var(--cl-lighter-light); } 
+    .tc-lighter{ color: var(--cl-lighter) !important; }
+    .tc-lighter-dark{ color: var(--cl-lighter-dark) !important; }  
+    .tc-lighter-light{ color: var(--cl-lighter-light) !important; } 
  
     
      /* Darker-colors */
-    .tc-darker{ color: var(--cl-darker); }
-    .tc-darker-dark{ color: var(--cl-darker-dark); }  
-    .tc-darker-light{ color: var(--cl-darker-light); }
+    .tc-darker{ color: var(--cl-darker) !important; }
+    .tc-darker-dark{ color: var(--cl-darker-dark) !important; }  
+    .tc-darker-light{ color: var(--cl-darker-light) !important; }
      
     
      /* Secondary-colors */
-    .tc-secondary{ color: var(--cl-secondary); }
-    .tc-secondary-dark{ color: var(--cl-secondary-dark); }  
-    .tc-secondary-light{ color: var(--cl-secondary-light); }    
+    .tc-secondary{ color: var(--cl-secondary) !important; }
+    .tc-secondary-dark{ color: var(--cl-secondary-dark) !important; }  
+    .tc-secondary-light{ color: var(--cl-secondary-light) !important; }    
 
 
 /* Global-Components */ 

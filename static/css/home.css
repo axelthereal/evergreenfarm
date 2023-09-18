@@ -50,6 +50,15 @@
 /* SeventhBanner */
  .SeventhBanner img{ 
    height: auto;
- }   
+ }  
+
+
+/* TenthBanner */
+  .TenthBanner{
+   background: url("../gallery/globe.png");
+   background-repeat: no-repeat;
+   background-position: top;
+   background-size:100%;
+  } 
 
     
