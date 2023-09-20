@@ -1,0 +1,99 @@
+/* DiscoverScreen Styling */
+  /* MainBanner -imgBanner */
+  .MainBanner.contentBanner{
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+ }
+ .contentBanner:not(.minBanner) .banner-container{
+    min-height: 85vh; 
+ }
+ .MainBanner .img-long-banner{
+    border: 3px solid var(--cl-active);
+    position: relative;
+    z-index:2px !important;
+    padding: 150px;
+    overflow: hidden;
+    border-radius: 150px;
+    background:url("../gallery/mom-and-daughter-farm.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:top;
+}
+
+ /* banner-containers */
+ .banner-container .bx-one{
+    padding-right: 25px;
+ }
+
+  /* partners-img */
+  .banner-container img.partners-img{
+    width: 100%;
+    height: auto; 
+ }   
+
+/* Teams-banner */ 
+.team-member .card-image{
+  width: 100%;  
+  max-width: 100%;
+  min-height: 400px; 
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+.img-gradient{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  
+    height: 100%; 
+    object-fit: cover; 
+    background-color: var(--cl-darker);
+    opacity: 0; 
+    z-index: 2;
+    transition: .3s ease-in;
+}
+.img-gradient:hover{
+    opacity: 0.8;
+}
+.team-member .card-image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  
+    height: 100%; 
+    object-fit: cover; 
+    z-index: 1;
+  }
+
+
+/* SixthBanner */
+.SixthBanner{
+    background: url("../gallery/pexels-kampus-production-8204325.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+ }  
+   
+/* Evergreen-Farms-Img */
+.farm-img-bx .card-cover{
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    background-position: center;
+    position: relative;
+    z-index: 3 !important;
+    overflow: hidden;
+}
+.bx-content{
+   z-index:2 !important;
+}
+.bx-gradient{
+  z-index:1 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--cl-darker);
+  opacity: 0.3;
+}
