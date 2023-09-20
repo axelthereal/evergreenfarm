@@ -171,6 +171,8 @@ z-index: 3;
   right: 0;
   z-index:1;
 }
+
+
 /* Body && Components */
   body{
     background-color: var(--cl-lighter);
@@ -184,6 +186,13 @@ z-index: 3;
   }
   .btn, .form-control {
     box-shadow: none !important;
+  }
+  ul{
+    list-style-type: none !important;
+  }
+  .dropdown .dropdown-toggle::after{
+    content: "" !important;
+    border: none !important;
   }
 
   /* Buttons */

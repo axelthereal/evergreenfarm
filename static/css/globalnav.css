@@ -1,4 +1,33 @@
 /** GlobalNav **/ 
+/* For mobile phones: */ 
+.lg-nav-links{
+  display: none !important;
+}
+.sm-nav-links{
+  display: inherit !important;
+}
+
+@media only screen and (min-width: 991px) {
+  /* For tablets: */
+  .lg-nav-links{
+    display: none !important;
+  }
+  .sm-nav-links{
+    display: inherit !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .lg-nav-links{
+    display: inherit !important;
+  }
+  .sm-nav-links{
+    display: none !important;
+  }
+}
+
+
   .GlobalNav img{
     width: 240px;
     height: auto;

@@ -2,13 +2,123 @@
 <header class="GlobalNav bg-active-light py-1 sticky-top">
     <nav class="navbar navbar-expand-lg navbar-default bg-transparent" aria-label="Thirteenth navbar example">
         <div class="container-fluid col-md-11">
+          
           <a class="navbar-brand" href="/home">
             <img src="assets/gallery/Evergreen-farms-logo.png" alt="evergreen-farms-logo" />
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button> 
-          <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+          </button>
+
+          <div class="offcanvas offcanvas-end bg-active-light" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title fs-5 fw-semibold" id="offcanvasNavbar2Label">Menu</h5> 
+              <button type="button" class="btn-close tc-darker" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav fw-semibold fs-6 col-lg-8 d-flex justify-content-center">
+                <li class="nav-item mx-2">
+                  <a class="nav-link link-active active" aria-current="page" href="/home">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link link-active" href="/marketplace">Marketplace</a>
+                </li> 
+                <li class="nav-item mx-2">
+                  <a class="nav-link link-active" href="/about">Our mission</a>
+                </li>  
+                <li class="nav-item mx-2">
+                  <a class="nav-link link-active" href="/blog">Blog</a>
+                </li> 
+              </ul>
+              <div class="d-lg-flex col-lg-4 justify-content-lg-end align-items-center">
+                <ul class="sm-nav-links navbar-nav d-flex flex-column ps-2 mb-3">
+                  <li class="nav-item"> 
+                    <a href="" class="nav-link fw-semibold link-active fs-6 border-0">
+                      <span class="fs-6 fw-semibold me-2 py-3">Login</span> <span class="bi bi-person fw-black fs-5"></span></a>
+                  </li> 
+                  <li class="nav-item">
+                    <a href="" class="fs-6 border-0">
+                      <span class="fs-6 fw-semibold me-2 py-3">Chart</span> <span class="bi bi-cart3 fw-black fs-5"></span></a>
+                  </li> 
+                  <li class="nav-item dropdown"> 
+                    <a href="" class="dropdown-toggle fs-6 border-0" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="fs-6 fw-semibold me-2 py-3">Language</span> <span class="bi bi-globe fw-black fs-5"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li> 
+                    </ul>
+                  </li>
+                </ul>
+
+                
+                <span class="lg-nav-links d-lg-flex align-items-center">
+                <a href="" class="fs-6 border-0 me-3"><span class="bi bi-globe fw-black me-1 fs-5"></span></a>
+                <a href="" class="fs-6 border-0 me-3"><span class="bi bi-cart3 fw-black fs-5"></span></a> 
+                <a href="" class="btn btn-default fw-semibold link-active fs-6 border-0 me-3">Login</a>
+                </span> 
+
+
+                
+                <a href="" class="btn btn-darker fw-medium"><span class="bi bi-person-add fw-black me-1 fs-6"></span> Create Account</a>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </nav>
+</header>
+
+
+
+
+<!-- nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Responsive offcanvas navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Offcanvas</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex mt-3 mt-lg-0" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav 
+
+
+
+<div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
             <ul class="navbar-nav fw-semibold fs-6 col-lg-8 justify-content-lg-center align-items-center">
               <li class="nav-item mx-2">
                 <a class="nav-link active" aria-current="page" href="/home">Home</a>
@@ -30,8 +140,4 @@
               <a href="" class="btn btn-darker fw-medium"><span class="bi bi-person-add fw-black me-1 fs-6"></span> Create Account</a>
             </div>
           </div>
-        </div>
-      </nav>
-</header>
-
-
+-->
