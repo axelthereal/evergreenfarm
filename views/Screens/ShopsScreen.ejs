@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Load-Static-Global-Assets -->
+    <%- include("../Components/base.ejs"); %>
+
+    <!-- Load-Static-Local-assets -->
+    <link rel="stylesheet" href="assets/css/discover.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
+</head>
+<body>
+    <!-- MainHeader -->
+     <%- include("../Headers/Header.ejs"); %>
+    <!-- */MainHeader -->
+    
+    <!-- AppBody -->
+    <main>  
+
+
+
+        <!-- trailing-space --> 
+        <br><br>  
+        <div class="sub-bottom"></div>
+        <!-- LastBanner -->
+        <div class="LastBanner minBanner contentBanner py-4 bg-active round-all sub-top">
+            <div class="banner-container container-fluid col-lg-11 py-5 my-3">
+                <div class="banner-header py-4 mt-3 d-flex align-items-center flex-column justify-content-center gap-2" align="center">
+                    <h3 class="fw-semibold display-5 tc-lighter-light col-md-7">Ready to get started ?</h3>
+                    <p class="lead fw-medium fs-5 col-md-6 tc-lighter opacity-75 ">
+                        Create your free shop now, no credit card needed.
+                    </p>
+                    <div class="btn-links d-lg-flex gap-3 justify-content-between align-items-center">
+                        <a href="" class="btn btn-darker d-block fs-5 fw-medium mt-3" type="button"><span class="bi bi-google-play me-2"></span> Playstore</a>
+                        <a href="" class="btn btn-darker d-block fs-5 fw-medium mt-3 disabled cursor-p" type="button"><span class="bi bi-apple me-2"></span> App Store</a>
+                     </div>
+                </div>  
+            </div>  
+          </div> 
+          <!-- /**LastBanner -->
+    </main>
+    <!-- /*AppBody -->
+
+    
+    <%- include("../Footers/GlobalFooter.ejs"); %>
+</body>
+</html>

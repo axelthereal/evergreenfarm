@@ -194,6 +194,7 @@ z-index: 3;
     content: "" !important;
     border: none !important;
   }
+  .cursor-p{ cursor:pointer !important;}
 
   /* Buttons */
   .btn:not(.btn-default){
@@ -263,7 +264,12 @@ z-index: 3;
 .input-active:focus{
   border: 1px solid var(--cl-active);
 }
-
+.div-active:focus-within {
+  border: 1px solid var(--cl-active) !important;
+}
+.div-active:focus-within .bi{
+  color: var(--cl-active) !important;
+}
 .link-active, .link-dark {
   cursor: pointer !important;
   color: inherit;
