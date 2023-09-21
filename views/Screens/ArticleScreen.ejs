@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Load-Static-Global-Assets -->
+    <%- include("../Components/base.ejs"); %>
+
+    <!-- Load-Static-Local-assets -->
+    <link rel="stylesheet" href="assets/css/discover.css">
+    <link rel="stylesheet" href="assets/css/blogarticle.css">
+</head>
+<body>
+    <!-- MainHeader -->
+     <%- include("../Headers/GlobalNavbar.ejs"); %>
+    <!-- */MainHeader -->
+    
+    <!-- AppBody -->
+    <main> 
+          <!-- NinethBanner -->
+          <div class="NinethBanner minBanner contentBanner mt-1 py-4 d-flex flex-column justify-content-center align-items-center"> 
+            <div class="banner-container container-fluid col-md-11 py-5 my-3">
+                 <div class="banner-content col-lg-12 mx-auto">
+                 <div class="row">
+
+                    <!-- Banner -->
+                    <div class="content-bx col-lg-8 mx-auto col-md-12"> 
+                             <div class="blog-articles my-4">
+
+                              <div class="col-md-12 my-3 blog-item">
+                                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-none border-0 h-md-250 position-relative">
+                                  <div class="col-lg-12 col-md-12 d-lg-block img-bx">
+                                    <img loading="lazy" class="bd-placeholder-img" height="100%" src="assets/gallery/boys-with-corns.jpg" role="img" preserveAspectRatio="xMidYMid slice">
+                                  </div>
+                                  <div class="col px-1 py-4 d-flex flex-column position-static">  
+                                    <div class="mb-1 small tc-darker">
+                                        <span class="tc-darker opacity-50 mx-1">Nov 12</span>
+                                        at <span class="tc-darker opacity-50 mx-1">12H 20 mins</span>
+                                    </div>  
+
+                                    <div class="blog-post-content">
+
+                                        
+                                <h1 class="display-6 fw-bold text-body-emphasis lh-1 mb-2">Blog Article tile here in header part</h1>
+                                <p class="lead fw-medium fs-5 tc-darker">Latest blog post, articles and tutorials on agriculture in africa...</fieldset>.</p>
+                                
+                                <p class="lead fw-medium fs-6 tc-darker">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis esse et 
+                                accusamus modi, vero necessitatibus quo omnis reiciendis! Nostrum porro laborum 
+                                deserunt, voluptatem magnam temporibus dignissimos eius labore atque excepturi.</p>
+    
+                                <p class="lead fw-medium fs-6 tc-darker">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis esse et 
+                                accusamus modi, vero necessitatibus quo omnis reiciendis! Nostrum porro laborum 
+                                deserunt, voluptatem magnam temporibus dignissimos eius labore atque excepturi.</p>
+
+                                    </div>
+                                   </div> 
+                                </div>
+                              </div>
+
+                                
+
+                             </div>
+                    </div>
+                    <!-- /*Banner -->
+
+                    <!-- SideBanner --> 
+                    <div class="sidebar-bx col-lg-4 mx-auto col-md-12"> 
+                            <div class="position-sticky" style="top: 2rem;"> 
+                              <div class="mt-5">
+                                <h4 class="fw-semibold fs-4 tc-darker">Popular posts</h4>
+                                <ul class="list-unstyled"> 
+                                  <li>
+                                    <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                                      <div class="sm-img-container rounded rounded-2 mx-auto">
+                                        <img loading="lazy" class="bd-placeholder-img" src="assets/gallery/boys-with-corns.jpg">
+                                       </div>
+                                      <div class="col-lg-8">
+                                        <h6 class="mb-0">Example blog post title</h6>
+                                        <small class="text-body-secondary">January 15, 2023</small>
+                                      </div>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                    </div>
+                    <!-- SidethBanner -->
+
+                </div>
+                 </div>
+            </div>  
+          </div> 
+          <!-- /**NinethBanner --> 
+
+    </main>
+    <!-- /*AppBody -->
+
+    
+    <%- include("../Footers/GlobalFooter.ejs"); %>
+</body>
+</html>

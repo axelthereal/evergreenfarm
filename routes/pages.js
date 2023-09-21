@@ -17,7 +17,19 @@ router.get("/home", (req, res) => {
 router.get("/discover", (req, res) => {
       context.viewtitle = "Our Mission";
       res.render("Screens/DiscoverScreen.ejs", context); 
-  });
+});
+router.get("/blog", (req, res) => {
+      context.viewtitle = "Blog";
+      res.render("Screens/BlogScreen.ejs", context); 
+});
+router.get("/article", (req, res) => {
+      context.viewtitle = "Article";
+      res.render("Screens/ArticleScreen.ejs", context); 
+});
+router.get("/search", (req, res) => {
+      context.viewtitle = "Result";
+      res.render("Screens/BlogSearch.ejs", context); 
+});
 
 
 export const pagesRouter = router;
