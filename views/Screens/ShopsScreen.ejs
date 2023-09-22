@@ -6,7 +6,7 @@
 
     <!-- Load-Static-Local-assets -->
     <link rel="stylesheet" href="assets/css/discover.css">
-    <link rel="stylesheet" href="assets/css/blog.css">
+    <link rel="stylesheet" href="assets/css/shops.css">
 </head>
 <body>
     <!-- MainHeader -->
@@ -15,6 +15,89 @@
     
     <!-- AppBody -->
     <main>  
+        <!-- MainBanner -->
+        <div class="bannerbox px-1 px-lg-0 ">
+            <div class="MainBanner mx-auto container-fluid col-lg-11 contentBanner minBanner gradient-container py-2 py-lg-4 mt-1 rounded-4 ovf-hide">
+                <div class="banner-gradient"></div>
+                <div class="banner-container container-fluid col-lg-11 py-lg-5 py-5 my-1 my-lg-5 gradient-content">
+                   <h1 class="display-4 tc-lighter-light fw-semibold col-lg-5 col-md-11">Browse Evergreen stores </h1>
+                   <p class="lead tc-lighter opacity-50 col-lg-7 col-md-11">Discover grocer's stores around your area and shop for free and get your problemes</p>
+                   <div class="btn-links col-lg-5 mt-3 col-11 d-lg-flex gap-2 justify-content-start align-items-center">
+                    <a href="" type="button" class="btn btn-active fs-5 my-1">Create store <span><i class="bi bi-bag-plus ms-1"></i></span></a> 
+                    <a href="" type="button" class="btn btn-darker fs-5 fw-medium my-1" type="button"><span class="bi bi-google-play me-2"></span> Download App</a>
+                   </div>
+                </div>  
+              </div>
+        </div> 
+          <!-- /**MainBanner -->
+
+         
+           <!-- StoresBanner -->
+        <div class="storesbox px-1 px-lg-0 ">
+            <div class="StoresBanner mx-auto container-fluid col-lg-11 contentBanner py-2 py-lg-4 mt-1 rounded-0">
+             <div class="banner-container container-fluid col-lg-11 py-lg-5 py-5 my-1 my-lg-5">
+                <div class="banner-header">
+                <h1 class="fs-3 fw-medium tc-darker">Popular this week</h1>
+                <p class="fs-6 fw-normal tc-darker-light opacity-75">Browse the most popular stores of the week</p>
+                </div>
+                
+                <!-- StoresProfiles -->
+                   <div class="storeprofiles container-fluid">
+                    <div class="row row-cols-1 row-cols-md-3 g-4"> 
+
+                         <% for(i=1; i <= 6; i++){ %>
+                         <!-- StoresCards -->
+                         <div class="storecard col p-0 pe-md-5">
+                            <a href="">
+                              <div class="card h-100 shadow-sm cursor-p d-flex flex-column">
+                                <div class="card-image">
+                                    <div class="overlay-content d-flex justify-content-center align-items-center">
+                                        <button class="btn btn-light rounded-circle shadow-sm p-4 lh-1"><i class="bi bi-cart tc-active fs-4"></i></button>
+                                    </div>
+                                    <div class="overlay"></div>
+                                    <img src="assets/gallery/carrots.jpg" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-body">
+                                  <div class="storetitle d-flex flex-column justify-content-center gap-0 pb-2">
+                                    <span class="fs-4 fw-semibold tc-darker">Banfield & Rowes <%= i %></span>
+                                    <span class="tc-darker fs-6 small opacity-50">Healthy Snacks</span>
+                                  </div>
+                                  <div class="storeinfo d-flex flex-column justify-content-center gap-0 mt-2 border-top pt-3">
+                                    <span class="d-flex flex-column align-items-start">
+                                        <span class="fw-medium tc-darker-dark">
+                                            Category
+                                        </span>
+                                        <span class="fw-medium tc-darker-light small opacity-50">
+                                            Healthy Snacks
+                                        </span>
+                                    </span>
+                                    <span class="d-flex flex-column align-items-start">
+                                        <span class="fw-medium tc-darker-dark">
+                                           Location
+                                        </span>
+                                        <span class="fw-medium tc-darker-light small opacity-50">
+                                          Kenya
+                                        </span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                            </div>
+                            <!-- /*StoreCard --> 
+                            <% } %> 
+ 
+                    </div>
+                   </div>
+                <!-- /**StoresProfiles -->
+
+             </div>  
+            </div>
+        </div> 
+          <!-- /**StoresBanner -->
+
+
+
         <!-- trailing-space --> 
         <br><br>  
         <div class="sub-bottom"></div>

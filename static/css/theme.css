@@ -195,6 +195,9 @@ z-index: 3;
     border: none !important;
   }
   .cursor-p{ cursor:pointer !important;}
+  .ovf-hide{ overflow: hidden;}
+  .ovf-x-hide{ overflow-x: hidden;}
+  .ovf-y-hide{ overflow-y: hidden;}
 
   /* Buttons */
   .btn:not(.btn-default){
