@@ -273,7 +273,7 @@ z-index: 3;
 .div-active:focus-within .bi{
   color: var(--cl-active) !important;
 }
-.link-active, .link-dark {
+.link-active, .link-dark, .link-light {
   cursor: pointer !important;
   color: inherit;
 }
@@ -288,4 +288,13 @@ z-index: 3;
 }
 .link-dark:active{
   color: var(--cl-darker-dark) !important;
+}
+.link-light.active {  color: var(--cl-lighter-light) !important;  opacity: 1 !important; }
+.link-light:active{
+  color: var(--cl-lighter-dark) !important;
+  opacity: 0.9 !important;
+}
+.link-light:focus{
+  color: var(--cl-lighter-light) !important;
+  opacity: 1 !important;
 }
