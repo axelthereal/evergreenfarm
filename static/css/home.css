@@ -3,7 +3,8 @@
   @media only screen and (max-width:1040px) {
       .MainBanner img.img-fluid{
          width:100% !important;
-         max-height:5% !important;
+         height:5% !important;
+         display: none !important;
       }
   }
      .MainBanner.contentBanner{
