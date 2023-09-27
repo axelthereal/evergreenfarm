@@ -31,7 +31,7 @@ router.get("/search", (req, res) => {
       res.render("Screens/BlogSearch.ejs", context); 
 });
 
-router.get("/shops", (req, res) => {
+router.get("/stores", (req, res) => {
       context.viewtitle = "Grocery Stores";
       res.render("Screens/ShopsScreen.ejs", context); 
 });
