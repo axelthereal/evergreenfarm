@@ -11,13 +11,14 @@
 <body>
     <!-- MainHeader -->
      <%- include("../Headers/Header.ejs"); %>
+     <%- include("../Headers/MinNav.ejs"); %>
     <!-- */MainHeader -->
     
     <!-- AppBody -->
     <main>  
         <!-- MainBanner -->
-        <div class="bannerbox px-1 px-lg-0 ">
-            <div class="MainBanner mx-auto container-fluid col-lg-11 contentBanner minBanner gradient-container py-2 py-lg-4 mt-1 rounded-4 ovf-hide">
+        <div class="bannerbox px-1 px-lg-0">
+            <div class="MainBanner mx-auto container-fluid col-lg-11 contentBanner minBanner gradient-container py-2 py-lg-4 mt-2 rounded-4 ovf-hide">
                 <div class="banner-gradient"></div>
                 <div class="banner-container container-fluid col-lg-11 py-lg-5 py-5 my-1 my-lg-5 gradient-content">
                    <h1 class="display-4 tc-lighter-light fw-semibold col-lg-5 col-md-11">Browse Evergreen stores </h1>
@@ -33,7 +34,7 @@
 
          
            <!-- StoresBanner -->
-        <div class="storesbox px-1 px-lg-0 ">
+        <div class="storesbox px-1 px-lg-0">
             <div class="StoresBanner mx-auto container-fluid col-lg-11 contentBanner py-2 py-lg-4 mt-1 rounded-0">
              <div class="banner-container container-fluid col-lg-11 py-lg-5 py-5 my-1 my-lg-5">
                 <div class="banner-header">
@@ -91,16 +92,121 @@
                    </div>
                 <!-- /**StoresProfiles -->
 
-             </div>  
+           </div>  
             </div>
         </div> 
           <!-- /**StoresBanner -->
 
-
-
         <!-- trailing-space --> 
         <br><br>  
         <div class="sub-bottom"></div>
+        <!-- LastBanner -->
+        <div class="LastBanner minBanner contentBanner py-4 bg-active round-0 sub-top sub-bottom">
+            <div class="banner-container container-fluid col-lg-11 py-5 my-3">
+                <div class="banner-header py-4 mt-3 d-flex align-items-center flex-column justify-content-center gap-2" align="center">
+                    <h3 class="fw-semibold display-5 tc-lighter-light col-md-7">Want to get your own store ?</h3>
+                    <p class="lead fw-medium fs-5 col-md-6 tc-lighter opacity-75 ">
+                        Create your free shop now, no credit card needed.
+                    </p>
+                    <div class="btn-links d-lg-flex gap-3 justify-content-between align-items-center">
+                        <a href="" class="btn btn-darker d-block fs-5 fw-medium mt-3" type="button">Sign up now <span class="bi bi-arrow-right ms-2"></span></a> 
+                     </div>
+                </div>  
+            </div>  
+          </div> 
+          <!-- /**LastBanner -->
+
+ <!-- StoresBanner --> 
+        
+ <div class="storesbox pb-0 mb-0 px-1 pt-5 pt-lg-2 px-lg-0 bg-white round-all sub-top">
+  <div class="StoresBanner mx-auto container-fluid col-lg-11 contentBanner py-2 py-lg-4 mt-1 rounded-0">
+   <div class="banner-container container-fluid col-lg-11 py-lg-5 py-5 my-1 my-lg-5">
+      <div class="banner-header">
+      <h1 class="fs-3 fw-medium tc-darker">Popular this week</h1>
+      <p class="fs-6 fw-normal tc-darker-light opacity-75">Browse the most popular stores of the week</p>
+      </div>
+      
+      <!-- StoresProfiles -->
+         <div class="storeprofiles container-fluid">
+          <div class="row row-cols-1 row-cols-md-3 g-4"> 
+
+               <% for(i=1; i <= 9; i++){ %>
+               <!-- StoresCards -->
+               <div class="storecard col p-0 pe-md-5">
+                  <a href="">
+                    <div class="card h-100 shadow-sm cursor-p d-flex flex-column">
+                      <div class="card-image">
+                          <div class="overlay-content d-flex justify-content-center align-items-center">
+                              <button class="btn btn-light rounded-circle shadow-sm p-4 lh-1"><i class="bi bi-cart tc-active fs-4"></i></button>
+                          </div>
+                          <div class="overlay"></div>
+                          <img src="assets/gallery/carrots.jpg" class="card-img-top" alt="...">
+                      </div>
+                      <div class="card-body">
+                        <div class="storetitle d-flex flex-column justify-content-center gap-0 pb-2">
+                          <span class="fs-4 fw-semibold tc-darker">Banfield & Rowes <%= i %></span>
+                          <span class="tc-darker fs-6 small opacity-50">Healthy Snacks</span>
+                        </div>
+                        <div class="storeinfo d-flex flex-column justify-content-center gap-0 mt-2 border-top pt-3">
+                          <span class="d-flex flex-column align-items-start">
+                              <span class="fw-medium tc-darker-dark">
+                                  Category
+                              </span>
+                              <span class="fw-medium tc-darker-light small opacity-50">
+                                  Healthy Snacks
+                              </span>
+                          </span>
+                          <span class="d-flex flex-column align-items-start">
+                              <span class="fw-medium tc-darker-dark">
+                                 Location
+                              </span>
+                              <span class="fw-medium tc-darker-light small opacity-50">
+                                Kenya
+                              </span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  </div>
+                  <!-- /*StoreCard --> 
+                  <% } %> 
+
+          </div>
+         </div>
+      <!-- /**StoresProfiles -->
+
+ </div>  
+  </div>
+</div> 
+<!-- /**StoresBanner -->
+
+
+
+<!-- grocers-testimonies -->
+     <!-- innerbanner -->
+     <div class="innerbanner contentBanner sub-bottom bg-primary-subtle pt-0 px-1 py-4 d-flex flex-column justify-content-center align-items-center"> 
+      <div class="banner-container container  col-md-11 py-5 my-3">
+           <div class="banner-content">
+              <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                  <div class="col-md-6 mx-md-auto mx-auto px-md-5">
+                    <img loading="lazy" src="assets/gallery/hand-holding-fresh-fruits.jpg" class="d-block mx-lg-auto mx-auto img-fluid rounded rounded-4" alt="Bootstrap Themes">
+                  </div>
+                  <div class="col-md-6 mx-md-auto mx-auto px-md-5">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-4">Responsive left-aligned hero with image</h1>
+                    <p class="lead fw-medium tc-darker-light">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-5">
+                      <button type="button" class="btn btn-darker btn-lg px-4 me-md-2">Learn more <span class="bi bi-arrow-right ms-3"></span></button> 
+                    </div>
+                  </div>
+                </div>        
+           </div>
+      </div>  
+    </div> 
+    <!-- /**innerbanner --> 
+<!-- /*grocers-testimonies -->
+
+
         <!-- LastBanner -->
         <div class="LastBanner minBanner contentBanner py-4 bg-active round-all sub-top">
             <div class="banner-container container-fluid col-lg-11 py-5 my-3">
