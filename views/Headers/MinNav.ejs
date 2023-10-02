@@ -1,8 +1,7 @@
 <style>
  
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
+      .nav-scroller { 
+        z-index: 4;
         height: 2.75rem;
         overflow-y: hidden;
       }
@@ -15,19 +14,65 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+      .nav-item:hover .item-menu{
+            display: block !important; 
+       }
+      .nav-item .item-menu{ 
+        display: none;
+        position:absolute;  
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 15px 15px;   
+        z-index:3 !important;
+        margin-top: 5px;
+        box-shadow: 3px 4px 4px 4px rgba(0, 0, 0, 0.13);
+      }
 </style> 
-<div class="secondnav bg-active pb-1">
+<div class="secondnav bg-active pb-1" id="secondnav">
     <div class="nav-scroller container py-1">
         <nav class="nav col-md-9 mx-auto fw-medium d-flex justify-content-between">
-          <a class="nav-item nav-link tc-lighter-dark link-light active" href="#">Dairy</a>
-          <a class="nav-item nav-link tc-lighter-dark link-light" href="#">Pantry</a>
-          <a class="nav-item nav-link tc-lighter-dark link-light" href="#">Fruit & Veg</a>
-          <a class="nav-item nav-link tc-lighter-dark link-light" href="#">Meat</a>
-          <a class="nav-item nav-link tc-lighter-dark link-light" href="#">Ready to eat</a>
-          <a class="nav-item nav-link tc-lighter-dark link-light" href="#">Drinks</a>
-          <a class="nav-item nav-link tc-lighter-dark link-light" href="#">Organic</a>
-          <a class="nav-item nav-link tc-lighter-dark link-light" href="#">Sale</a>
-          <a class="nav-item nav-link tc-lighter-dark link-light" href="#">New</a> 
+          <a class="nav-item nav-link tc-lighter-dark link-light active" id="navItem_0" href="#">
+            <span class="label">Dairy</span>
+            <div class="item-menu tc-darker-dark rounded rounded-1 col-lg-10 px-0 mx-auto">
+                   <h1>Hello Brooo</h1>
+            </div> 
+          </a>
+          <a class="nav-item nav-link tc-lighter-dark link-light" id="navItem_1" href="#">
+            <span class="label">Pantry</span>
+
+          </a>
+          <a class="nav-item nav-link tc-lighter-dark link-light" id="navItem_2" href="#">
+            <span class="label">Fruit & Veg</span>
+
+          </a>
+          <a class="nav-item nav-link tc-lighter-dark link-light" id="navItem_3" href="#">
+            <span class="label">Meat</span>
+
+          </a>
+          <a class="nav-item nav-link tc-lighter-dark link-light" id="navItem_4" href="#">
+            <span class="label">Ready to eat</span>
+
+          </a>
+          <a class="nav-item nav-link tc-lighter-dark link-light" id="navItem_5" href="#">
+            <span class="label">Drinks</span>
+
+          </a>
+          <a class="nav-item nav-link tc-lighter-dark link-light" id="navItem_6" href="#">
+            <span class="label">Organic</span>
+
+          </a>
+          <a class="nav-item nav-link tc-lighter-dark link-light" id="navItem_7" href="#">
+            <span class="label">Sale</span>
+
+          </a>
+          <a class="nav-item nav-link tc-lighter-dark link-light" id="navItem_8" href="#">
+            <span class="label">New</span>
+
+          </a> 
         </nav>
       </div>
+
+      
 </div>
+
