@@ -1,92 +1,85 @@
 <style>
  
-      .nav-scroller { 
-        z-index: 4;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
+  .nav-scroller {
+    position: relative;
+    z-index: 4;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
 
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap; 
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-      .nav-item:hover .item-menu{
-            display: block !important; 
-       }
-      .nav-item .item-menu{ 
-        display: none;
-        position:absolute;  
-        left: 0;
-        right: 0;
-        background-color: #fff;
-        padding:15px 15px;   
-        z-index:5 !important;
-        margin-top: 5px;
-        box-shadow: 3px 4px 4px 4px rgba(0, 0, 0, 0.13);
-      }
-      a.menu-link{
-        padding: 0px !important;
-        margin: 0px !important;
-        width: auto !important;
-        display:block !important;
-      }
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+   .nav-menu[isMenuActive="true"]{
+        display: block;
+   }
+  .nav-menu{
+    display: none;
+    position:absolute;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 15px 15px;   
+    z-index:5 !important;
+    margin-top: 3px;
+    box-shadow: 3px 4px 4px 4px rgba(0, 0, 0, 0.13);
+  }
 </style> 
 <div class="secondnav bg-active pb-1" id="secondnav">
-    <div class="nav-scroller container py-1">
-        <nav class="nav col-md-9 mx-auto fw-medium d-flex justify-content-between">
-          <a class="nav-item nav-link tc-lighter-dark link-light active" id="navItem_0" href="#">
-            <span class="label">Dairy</span> 
-            <!-- item-menu -->  
-            <div class="item-menu tc-darker-dark rounded rounded-1 col-lg-10 px-0 mx-auto px-4">
-                 <div class="menu-header" align="start">
-                       <span class="d-block fs-5 fw-semibold tc-darker text-body-emphasis">Dairy Products</span>
-                       <span class="d-block fs-6 tc-darker-light text-body-secondary opacity-75">Some category description text</span>
-                 </div>
-                 <div class="menu-container row g-4 py-5 row-cols-1 row-cols-lg-3">
-                      <div class="col">Try Catch</div>
-                 </div>
-            </div>
-            <!-- /*item-menu -->
-          </a>
-          <a class="nav-item nav-link tc-lighter-dark link-light" id="navItem_1" href="#">
-            <span class="label">Pantry</span>
+<div class="nav-scroller container py-1">
+    <nav class="nav col-md-9 mx-auto fw-medium d-flex justify-content-between">
+      <a class="nav-item nav-link tc-lighter-dark link-light active" :onmouseleave="onMouseLeave" :onmouseenter="onHover" id="navItem_0" href="#">Dairy</a>
+      <a class="nav-item nav-link tc-lighter-dark link-light" :onmouseleave="onMouseLeave" :onmouseenter="onHover" id="navItem_1" href="#">Pantry</a>
+      <a class="nav-item nav-link tc-lighter-dark link-light" :onmouseleave="onMouseLeave" :onmouseenter="onHover" id="navItem_2" href="#">Fruit & Veg</a>
+      <a class="nav-item nav-link tc-lighter-dark link-light" :onmouseleave="onMouseLeave" :onmouseenter="onHover" id="navItem_3" href="#">Meat</a>
+      <a class="nav-item nav-link tc-lighter-dark link-light" :onmouseleave="onMouseLeave" :onmouseenter="onHover" id="navItem_4" href="#">Ready to eat</a>
+      <a class="nav-item nav-link tc-lighter-dark link-light" :onmouseleave="onMouseLeave" :onmouseenter="onHover" id="navItem_5" href="#">Drinks</a>
+      <a class="nav-item nav-link tc-lighter-dark link-light" :onmouseleave="onMouseLeave" :onmouseenter="onHover" id="navItem_6" href="#">Organic</a>
+      <a class="nav-item nav-link tc-lighter-dark link-light" :onmouseleave="onMouseLeave" :onmouseenter="onHover" id="navItem_7" href="#">Sale</a>
+      <a class="nav-item nav-link tc-lighter-dark link-light" :onmouseleave="onMouseLeave" :onmouseenter="onHover" id="navItem_8" href="#">New</a> 
+    </nav>
+  </div>
 
-          </a>
-          <a class="nav-item nav-link tc-lighter-dark link-light" id="navItem_2" href="#">
-            <span class="label">Fruit & Veg</span>
-
-          </a>
-          <a class="nav-item nav-link tc-lighter-dark link-light" id="navItem_3" href="#">
-            <span class="label">Meat</span>
-
-          </a>
-          <a class="nav-item nav-link tc-lighter-dark link-light" id="navItem_4" href="#">
-            <span class="label">Ready to eat</span>
-
-          </a>
-          <a class="nav-item nav-link tc-lighter-dark link-light" id="navItem_5" href="#">
-            <span class="label">Drinks</span>
-
-          </a>
-          <a class="nav-item nav-link tc-lighter-dark link-light" id="navItem_6" href="#">
-            <span class="label">Organic</span>
-
-          </a>
-          <a class="nav-item nav-link tc-lighter-dark link-light" id="navItem_7" href="#">
-            <span class="label">Sale</span>
-
-          </a>
-          <a class="nav-item nav-link tc-lighter-dark link-light" id="navItem_8" href="#">
-            <span class="label">New</span>
-
-          </a> 
-        </nav>
+  <div class="nav-menu rounded rounded-1 col-lg-10 px-0 mx-auto" target="navItem_0" :isMenuActive="menuActive">
+    <div class="container col-md-11 col-4 mx-auto">
+      <div class="menu-header" align="start">
+        <span class="d-block fs-5 fw-semibold tc-darker text-body-emphasis">Dairy Products</span>
+        <span class="d-block fs-6 tc-darker-light text-body-secondary opacity-75">Some category description text</span>
+      </div> 
+      <div class="menu-container">
+          <ul class="listitems">
+              <li class="list-item"><a href="" class="link-active">food 1</a></li>
+          </ul>
       </div>
+    </div>
+  </div>
 
-      
 </div>
 
+<script>
+let { createApp } = Vue;
+let navApp = createApp({
+      data(){
+         return {
+             activeitem: "None",
+             menuActive: false
+         }
+      },
+      methods: {
+          onHover(node){ 
+              document.querySelector("[target='" + node.srcElement.id + "']").style.display = "block"; 
+          },
+          onMouseLeave(node){  
+            document.querySelector("[target='" + node.srcElement.id + "']").style.display = "none"; 
+          }
+      },
+      mounted(){
+        
+      }
+}).mount("#secondnav");
+</script>
