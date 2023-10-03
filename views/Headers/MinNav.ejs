@@ -23,20 +23,34 @@
         left: 0;
         right: 0;
         background-color: #fff;
-        padding: 15px 15px;   
-        z-index:3 !important;
+        padding:15px 15px;   
+        z-index:5 !important;
         margin-top: 5px;
         box-shadow: 3px 4px 4px 4px rgba(0, 0, 0, 0.13);
+      }
+      a.menu-link{
+        padding: 0px !important;
+        margin: 0px !important;
+        width: auto !important;
+        display:block !important;
       }
 </style> 
 <div class="secondnav bg-active pb-1" id="secondnav">
     <div class="nav-scroller container py-1">
         <nav class="nav col-md-9 mx-auto fw-medium d-flex justify-content-between">
           <a class="nav-item nav-link tc-lighter-dark link-light active" id="navItem_0" href="#">
-            <span class="label">Dairy</span>
-            <div class="item-menu tc-darker-dark rounded rounded-1 col-lg-10 px-0 mx-auto">
-                   <h1>Hello Brooo</h1>
-            </div> 
+            <span class="label">Dairy</span> 
+            <!-- item-menu -->  
+            <div class="item-menu tc-darker-dark rounded rounded-1 col-lg-10 px-0 mx-auto px-4">
+                 <div class="menu-header" align="start">
+                       <span class="d-block fs-5 fw-semibold tc-darker text-body-emphasis">Dairy Products</span>
+                       <span class="d-block fs-6 tc-darker-light text-body-secondary opacity-75">Some category description text</span>
+                 </div>
+                 <div class="menu-container row g-4 py-5 row-cols-1 row-cols-lg-3">
+                      <div class="col">Try Catch</div>
+                 </div>
+            </div>
+            <!-- /*item-menu -->
           </a>
           <a class="nav-item nav-link tc-lighter-dark link-light" id="navItem_1" href="#">
             <span class="label">Pantry</span>
