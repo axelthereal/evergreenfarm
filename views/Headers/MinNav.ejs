@@ -16,7 +16,7 @@
     -webkit-overflow-scrolling: touch;
   }
    .nav-menu[isMenuActive="true"]{
-        display: block;
+        display: block !important;
    }
   .nav-menu{
     display: none;
@@ -45,19 +45,20 @@
     </nav>
   </div>
 
-  <div class="nav-menu rounded rounded-1 col-lg-10 px-0 mx-auto" target="navItem_0" :isMenuActive="menuActive">
+  <div class="nav-menu rounded rounded-1 col-lg-10 px-0 mx-auto" :onmouseleave="onMenuMouseLeave" :onmouseenter="onMenuHover" target="navItem_0" :isMenuActive="menuActive">
     <div class="container col-md-11 col-4 mx-auto">
       <div class="menu-header" align="start">
         <span class="d-block fs-5 fw-semibold tc-darker text-body-emphasis">Dairy Products</span>
         <span class="d-block fs-6 tc-darker-light text-body-secondary opacity-75">Some category description text</span>
       </div> 
       <div class="menu-container">
-          <ul class="listitems">
-              <li class="list-item"><a href="" class="link-active">food 1</a></li>
+          <ul class="listitems p-0 m-0">
+              <li class="item"><a href="" class="link-active">food 1</a></li>
           </ul>
       </div>
     </div>
   </div>
+  
 
 </div>
 
@@ -76,7 +77,13 @@ let navApp = createApp({
           },
           onMouseLeave(node){  
             document.querySelector("[target='" + node.srcElement.id + "']").style.display = "none"; 
-          }
+          },
+          onMenuHover(node){ 
+            this.menuActive = true; 
+          },
+         onMenuMouseLeave(node){  
+           this.menuActive = false;  
+         }
       },
       mounted(){
         
