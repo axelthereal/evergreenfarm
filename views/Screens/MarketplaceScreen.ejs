@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Load-Static-Global-Assets -->
+    <%- include("../Components/base.ejs"); %>
+
+    <!-- Load-Static-Local-assets --> 
+    <link rel="stylesheet" href="assets/css/discover.css">
+    <link rel="stylesheet" href="assets/css/shops.css">
+    <style>
+        #adsCarousel .carousel-item{
+           height:500px !important;
+        }
+        #adsCarousel .carousel-item .carousel-image{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position:center;
+        }
+        #adsCarousel .gradient-overfront .carousel-caption, #adsCarousel .carousel-icon {
+            z-index:3 !important;
+        } 
+        .carousel-circle{
+            width: 13px !important;
+            height: 13px !important;
+        }          
+        #topProducts .carousel-icon{ 
+            width: auto !important;
+        }
+        #topProducts .carousel-icon .carousel-control-next-icon{ 
+               background-image: none;
+        }
+        #topProducts .carousel-item{ 
+        }
+    </style>
+</head>
+<body>
+        <!-- MainHeader -->
+        <%- include("../Headers/Header.ejs"); %>
+        <%- include("../Headers/MinNav.ejs"); %>
+        <!-- */MainHeader -->
+
+
+        <!-- MainBody -->
+        <main>
+
+          <!-- TopBanner - carousel -->
+           <div class="bannerbox">
+            <div id="adsCarousel" class="carousel slide mb-6 pointer-event" data-bs-ride="carousel" data-bs-theme="light">
+                
+                <div class="carousel-inner">
+                   <div class="carousel-item gradient-container" id="item1"> 
+                            <img src="assets/gallery/carrots.jpg" alt="EvergreenFarms-Ads-Banner-Image" class="carousel-image" loading="lazy">
+                            <div class="banner-gradient"></div>
+                    <div class="container gradient-overfront">
+                          <div class="carousel-caption d-flex flex-column justify-content-center text-start h-100  gap-1">
+                                 <h1 class="display-4 tc-lighter-light fw-semibold col-12 col-lg-8">Example headline.</h1>
+                                 <p class="lead tc-lighter opacity-75 col-12 col-lg-8">Some representative placeholder content for the first slide of the carousel.</p>
+                                 <p> <a href="" type="button" class="btn btn-active fs-5 my-1">View product <span><i class="bi bi-arrow-right-short ms-1"></i></span></a> </p> 
+                          </div>
+                      </div>
+                   </div> 
+
+                 <div class="carousel-item active" id="item2"> 
+                    <img src="assets/gallery/fresh-foods.jpg" alt="EvergreenFarms-Ads-Banner-Image" class="carousel-image" loading="lazy">
+                    <div class="banner-gradient"></div>
+                   <div class="container gradient-overfront">
+                    <div class="carousel-caption d-flex flex-column justify-content-center text-start h-100 gap-1">
+                            <h1 class="display-4 tc-lighter-light fw-semibold col-12 col-lg-8">Another example headline.</h1>
+                            <p class="lead tc-lighter opacity-75 col-12 col-lg-8 ">Some representative placeholder content for the second slide of the carousel.</p>
+                            <p><a href="" type="button" class="btn btn-active fs-5 my-1">View product <span><i class="bi bi-arrow-right-short ms-1"></i></span></a></p>
+                         </div>
+                    </div> 
+                  </div> 
+
+                  <div class="carousel-item" id="item3">
+                    <img src="assets/gallery/mom-and-daughter-farm.jpg" alt="EvergreenFarms-Ads-Banner-Image" class="carousel-image" loading="lazy">
+                    <div class="banner-gradient"></div>
+                    <div class="container gradient-overfront">
+                      <div class="carousel-caption d-flex flex-column justify-content-center text-start h-100  gap-1">
+                        <h1 class="display-4 tc-lighter-light fw-semibold col-12 col-lg-8">One more for good measure.</h1>
+                        <p class="lead tc-lighter opacity-75 col-12 col-lg-8">Some representative placeholder content for the third slide of this carousel.</p>
+                        <p><a href="" type="button" class="btn btn-active fs-5 my-1">View product <span><i class="bi bi-arrow-right-short ms-1"></i></span></a></p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <button class="carousel-control-prev carousel-icon" type="button" data-bs-target="#adsCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next carousel-icon" type="button" data-bs-target="#adsCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <!-- */TopBanner -->
+
+            <!-- Top selling products -->
+              <!-- ProductsBanner -->
+        <div class="storesboxbox px-0 px-lg-0">
+            <div class="StoresBanner mx-auto container contentBanner py-2 py-lg-4 mt-1">
+             <div class="banner-container py-5 my-1 my-lg-5">
+                <div class="banner-header container col-12 col-lg-10">
+                <h1 class="display-6 fw-semibold tc-darker">Top Sellers</h1>
+                <p class="fs-6 fw-normal tc-darker-light opacity-75">Browse the most popular products of the month</p>
+                </div>
+                
+                <!-- ProductsProfiles -->
+                   <div class="storeprofiles container col-12 col-lg-11">
+                     <div id="topProducts" class="carousel slide mb-6 pointer-event" data-bs-ride="carousel" data-bs-theme="light">
+                     <div class="carousel-inner">
+                           
+                        
+                        <!-- ProductGroupItem -->  
+                        <div class="carousel-item px-5" id="item1"> 
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                               <% for(i = 1; i <= 3; i++){ %>
+                                <!-- ProductCard -->
+                                <div class="col">
+                                    <div class="card">
+                                      <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                                      <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">
+                                            Some quick example text to build on the card.</p>
+                                        <a href="" class="btn btn-active d-block fs-5 w-100 mx-auto fw-medium mt-3" type="button">Buy now</a> 
+                                      </div>
+                                    </div>
+                                  </div>
+                                <!-- */ProductCard -->
+                                <% } %>
+                            </div>
+                        </div>
+                            <!-- ProductGroupItem -->
+
+                        <!-- ProductGroupItem -->  
+                         <div class="carousel-item px-5 active" id="item2"> 
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                               <% for(i = 1; i <= 3; i++){ %>
+                                <!-- ProductCard -->
+                                <div class="col">
+                                    <div class="card">
+                                      <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                                      <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">
+                                            Some quick example text to build on the card.</p>
+                                        <a href="" class="btn btn-active d-block fs-5 w-100 mx-auto fw-medium mt-3" type="button">Buy now</a> 
+                                      </div>
+                                    </div>
+                                  </div>
+                                <!-- */ProductCard -->
+                                <% } %>
+                            </div> 
+                          </div> 
+                          <!-- */ProductGroupItem --> 
+
+                        <!-- ProductGroupItem -->  
+                         <div class="carousel-item px-5" id="item3"> 
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                               <% for(i = 1; i <= 3; i++){ %>
+                                <!-- ProductCard -->
+                                <div class="col">
+                                    <div class="card">
+                                      <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                                      <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">
+                                            Some quick example text to build on the card.</p>
+                                        <a href="" class="btn btn-active d-block fs-5 w-100 mx-auto fw-medium mt-3" type="button">Buy now</a> 
+                                      </div>
+                                    </div>
+                                  </div>
+                                <!-- */ProductCard -->
+                                <% } %>
+                            </div> 
+                          </div> 
+                          <!-- */ProductGroupItem -->
+        
+                          
+                          
+                        </div> 
+                        <button class="carousel-control-prev carousel-icon" type="button" data-bs-target="#topProducts" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon bi-chevron-left fs-4 tc-darker" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next carousel-icon" type="button" data-bs-target="#topProducts" data-bs-slide="next">
+                            <span class="carousel-control-next-icon bi-chevron-right fs-4 tc-darker" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                      </div>
+
+                   </div>
+                <!-- /**ProductsProfiles -->
+
+           </div>  
+            </div>
+        </div> 
+          <!-- /**productssBanner -->
+
+        </main>
+
+       
+</body>
+</html>

@@ -45,10 +45,23 @@
     </nav>
   </div>
 
-  <div class="nav-menu rounded rounded-1 col-lg-10 px-0 mx-auto" :onmouseleave="onMenuMouseLeave" :onmouseenter="onMenuHover" target="navItem_0" :isMenuActive="menuActive">
-    <div class="container col-md-11 col-4 mx-auto">
+  <div class="nav-menu rounded rounded-1 rounded-top-0 col-lg-10 px-0 mx-auto" :onmouseleave="onMenuMouseLeave" :onmouseenter="onMenuHover" target="navItem_0" :isMenuActive="menuActive">
+    <div class="container col-10 col-lg-11 mx-auto">
       <div class="menu-header" align="start">
         <span class="d-block fs-5 fw-semibold tc-darker text-body-emphasis">Dairy Products</span>
+        <span class="d-block fs-6 tc-darker-light text-body-secondary opacity-75">Some category description text</span>
+      </div> 
+      <div class="menu-container">
+          <ul class="listitems p-0 m-0">
+              <li class="item"><a href="" class="link-active">food 1</a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+  <div class="nav-menu rounded rounded-1 rounded-top-0 col-lg-10 px-0 mx-auto" :onmouseleave="onMenuMouseLeave" :onmouseenter="onMenuHover" target="navItem_1" :isMenuActive="menuActive">
+    <div class="container col-10 col-lg-11 mx-auto">
+      <div class="menu-header" align="start">
+        <span class="d-block fs-5 fw-semibold tc-darker text-body-emphasis">Pantry products Products</span>
         <span class="d-block fs-6 tc-darker-light text-body-secondary opacity-75">Some category description text</span>
       </div> 
       <div class="menu-container">

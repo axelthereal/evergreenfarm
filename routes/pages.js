@@ -35,5 +35,9 @@ router.get("/stores", (req, res) => {
       context.viewtitle = "Grocery Stores";
       res.render("Screens/ShopsScreen.ejs", context); 
 });
+router.get("/marketplace", (req, res) => {
+      context.viewtitle = "Grocery Stores";
+      res.render("Screens/MarketplaceScreen.ejs", context); 
+});
 
 export const pagesRouter = router;
